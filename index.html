@@ -1,0 +1,320 @@
+<html lang="en">
+
+    <head>
+
+        <title>Mims Ranch</title>
+
+     <a href="http://www.mimsranch.com"></a>
+
+        <link rel="icon" href="mr.png">
+
+
+<!-- Bootstrap CSS-->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+<!-- CSS -->
+
+        <style>
+
+            .navbar {
+              background-color: #f8f9fa;
+              box-shadow: 3px 3px 20px #999;
+            }
+            .jumbotron {
+              background-image: url(Cows.jpg);
+              background-size: cover;
+              color: white;
+              margin-bottom: 30px;
+              margin-top: 60px;
+            }
+            .jumbotrontwo {
+              background-image: url(farmland.jpg);
+              background-size: cover;
+              height: 400px;
+              margin-bottom: 50px;
+              margin-top: 50px;
+            }
+            .jumbotronthree {
+              background-image: url(field.jpg);
+              background-size: cover;
+              height: 400px;
+              margin-bottom: 50px;
+              margin-top: 50px;
+            }
+            #tmimscorp {
+              width: 100px;
+              height: 40px;
+            }
+
+            .modal-title {
+              color: black;
+            }
+
+            .modal-content {
+              color: black;
+            }
+            .modal-header {
+              color: black;
+            }
+
+            #emailUs-button {
+              padding-top: 20px;
+            }
+            .footer {
+              height: 100px;
+              margin-top: 50px;
+            }
+            /* #home {
+
+            }
+            #aboutUs {
+
+            } */
+        </style>
+
+        <!-- JQuery first, then Bootstrap Javascript -->
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+
+
+<!-- Bootstraps -->
+
+    <!-- Navbar -->
+
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="http://www.tmimscorp.com"><img id= tmimscorp src="tmimscorp.jpg"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#jumbotrontwo">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#jumbotronthree">Contact Us</a>
+          </li>
+        </ul>
+
+      </div>
+        </nav>
+
+    <!-- Jumbotron 1 -->
+
+            <div class="jumbotron">
+
+      <h1 class="display-4">Mims Ranch</h1>
+
+      <p class="lead">The standard Lorem Ipsum passage, used since the 1500s
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <hr class="my-4">
+      <p>
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <!-- "Email Us" Button -->
+     <div class="text-center">
+      <p id="emailUs-button" class="lead">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal">Email Us</button>
+          </p>
+         </div>
+
+                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">New Message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+        <div id="error"></div>
+
+    <div class="modal-body">
+      <form action="submitForm.php" method="POST">
+        <fieldset class="form-group">
+          <label for="recipient-name" class="col-form-label">Full Name: *</label>
+          <input type="text" class="form-control" placeholder="Ex. John Smith" required="required" id="recipient-name" name="recipient-name">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="email" class="col-form-label">Email Address: *</label>
+          <input type="email" class="form-control" placeholder="Ex. johnsmith@gmail.com" required="required" id="email" name="email">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="company-name" class="col-form-label">Company Name:</label>
+          <input type="text" class="form-control" placeholder="Ex. Smith Inc."id="company-name" name="company-name">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="telephone" class="col-form-label">Telephone:</label>
+          <input type="numerical" class="form-control" placeholder="999-999-9999" id="telephone" name="telephone">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="message-text" class="col-form-label">Message: *</label>
+          <textarea class="form-control"  required="required" id="message-text" name="message-text"></textarea>
+        </fieldset>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" id="submit">Send message</button>
+        </div>
+      </form>
+    </div>
+
+
+      </div>
+    </div>
+                </div>
+</div>
+
+<!-- Narrative/Home -->
+
+        <div class="container">
+
+        <h2 id="home">Home</h2>
+        <p>The standard Lorem Ipsum passage, used since the 1500s
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+
+            </div>
+
+<!-- Jumbotron 2 -->
+
+         <div id="jumbotrontwo" class="jumbotrontwo jumbotrontwo-fluid">
+  <div class="container">
+    <h1 class="display-4"></h1>
+    <p class="lead"></p>
+  </div>
+</div>
+
+
+
+      <div class="container">
+
+        <h2 id="aboutUs">About Us</h2>
+        <p>The standard Lorem Ipsum passage, used since the 1500s
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+
+        </div>
+
+        <!-- Jumbotron 3 -->
+
+         <div id="jumbotronthree" class="jumbotronthree jumbotronthree-fluid">
+  <div class="container">
+    <h1 class="display-4"></h1>
+    <p class="lead"></p>
+  </div>
+</div>
+
+        <div class="container">
+
+
+          <h2 id="contactUs">Contact Us</h2>
+        <p>The standard Lorem Ipsum passage, used since the 1500s
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+
+
+    <div class="text-center">
+        <p id="moreInfo-button" class="lead">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal">More Information</button>
+          </p>
+    </div>
+    </div>
+
+
+    <!-- Footer -->
+
+        <footer class="footer footer-classic bg-light">
+		  <div class="container">
+			<div class="row justify-content-center">
+
+				<div class="col-lg-7 col-md-8 ">
+					<div class="text-center">
+				<!--		<a href="">
+
+						</a>
+						<p>
+							Mollit auctor eum, fames gravida deserunt senectus eius nonummy felis natus saepe accusantium arcu, ultricies eos pretium amet quia habitant pede.
+						</p>
+						<div class="social-icons">
+							<a href="#" class="btn btn-social btn-social-o facebook">
+								<i class="fa fa-facebook-f"></i>
+							</a>
+							<a href="#" class="btn btn-social btn-social-o twitter">
+								<i class="fa fa-twitter"></i>
+							</a>
+							<a href="#" class="btn btn-social btn-social-o google-plus">
+								<i class="fa fa-google-plus"></i>
+							</a>
+							<a href="#" class="btn btn-social btn-social-o linkedin">
+								<i class="fa fa-linkedin"></i>
+							</a>
+
+                -->
+
+						</div>
+					</div>
+				</div>
+				<!-- BACK TO TOP BUTTON -->
+				<a href="#pageTop" class="backToTop"><i class="fa fa-chevron-up"></i></a>
+			</div>
+			<!-- COPY RIGHT -->
+			<div class="copyright">
+				<hr>
+				<div class="row justify-content-center">
+					<div class="col-md-8 col-lg-6 ">
+						<div class="copyRight_text text-center">
+							<p> © 2018 Copyright <a class="text-primary" href="http://www.tmimscorp.com" target="_blank">T. Mims Corp</a>.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+	   </footer>
+     <!-- <?php include 'submitForm.php';?> -->
+
+    <script>
+    // $('#myForm').on('submit', function(e){
+    //
+    //   e.preventDefault();
+    //   let error = "";
+    //
+    //   if ($("#recipient-name").val() == "") {
+    //       error += "<p>The name field is required.</p>";
+    //   }
+    //
+    //   if ($("#email").val() == "") {
+    //       error += "<p>The email field is required.</p>";
+    //   }
+    //
+    //   if ($("#message-text").val() == "") {
+    //       error += "<p>The text field is required.</p>";
+    //   }
+    //
+    //
+    //   if (error != "") {
+    //       $("#error").html('div class="alert alert-danger" role="alert"><p><strong>There were error(s) in your form:</strong></p>' + error + '</div>');
+    //   } else {
+    //     $("form").unbind("submit").submit();
+    //   }
+    //
+    // });
+    </script>
+    </body>
+
+
+</html>
