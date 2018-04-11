@@ -28,22 +28,22 @@
       if(!$_POST["email"]) {
           $error .= "An email address is required <br>";
       }
-      if(!$_POST["message"]) {
+      if(!$_POST["message-text"]) {
         $error .= "The content field is required <br>";
       }
-      if(!$_POST["name"]) {
+      if(!$_POST["recipient-name"]) {
         $error .= "The name field is required <br>";
       }
-      if(!$_POST["company"]) {
+      if(!$_POST["company-name"]) {
         $error .= "The company field is required <br>";
       }
      // if(!$_POST["city"]) {
      //   $error .= "The city field is required <br>";
      // }
-      if(!$_POST["state"]) {
-        $error .= "The state field is required <br>";
-      }
-      if(!$_POST["phone"]) {
+      // if(!$_POST["state"]) {
+      //   $error .= "The state field is required <br>";
+      // }
+      if(!$_POST["telephone"]) {
         $error .= "The phone field is required <br>";
       }
 
@@ -66,8 +66,8 @@
    } else {
      $emailTo = "patrick@tmimscorp.com";
      $subject = "SUBJECT HERE";
-     $content = "About Company: ".$_POST['message']."\n";
-     $content .= "Full Name: ".$_POST['name']."\n";
+     $content = "About Company: ".$_POST['message-text']."\n";
+     $content .= "Full Name: ".$_POST['recipient-name']."\n";
      $headers = "From: ".$_POST['email']."\n";
    }
 
@@ -82,15 +82,16 @@
        $response = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><p> Your message couldn\'t be sent - please try again later.</p><button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="alert-close">×</span></button></div>';
    }
   }
-  // echo $response;
+  echo $response;
 
-  echo '<script type="text/javascript">',
-        '$(document).ready(function(){',
-        '$(\'#submit\').trigger(\'click\');',
-        'console.log("hello");',
-        '$(body).append(\'<h1>balls</h1>\');',
-        '});',
-        '</script>'
+  // echo '<script type="text/javascript">',
+  //       '$(document).ready(function(){',
+  //       '$(\'#submit\').trigger(\'click\');',
+  //       'console.log("hello");',
+  //       '$(body).append(\'<h1>balls</h1>\');',
+  //       '});',
+  //       '</script>'
 ;
 }
+  return submitForm();
 ?>
